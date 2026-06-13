@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Idea Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background -->
+        <div class="background">
+            <div class="bg-gradient"></div>
+            
+            <!-- Abstract Shapes -->
+            <div class="abstract-shape shape-1">
+                <svg viewBox="0 0 200 200" style="width: 100%; height: 100%; filter: blur(2px);">
+                    <circle cx="100" cy="100" r="80" fill="#7c3aed" opacity="0.3"/>
+                    <path d="M100,20 L180,100 L100,180 L20,100 Z" fill="#2563eb" opacity="0.2"/>
+                </svg>
+            </div>
+            
+            <div class="abstract-shape shape-2">
+                <svg viewBox="0 0 200 200" style="width: 100%; height: 100%; filter: blur(4px);">
+                    <rect x="40" y="40" width="120" height="120" rx="20" fill="#2563eb" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="50" fill="#7c3aed" opacity="0.2"/>
+                </svg>
+            </div>
+            
+            <div class="abstract-shape shape-3">
+                <svg viewBox="0 0 100 100" style="width: 100%; height: 100%; filter: blur(2px);">
+                    <path d="M50,10 L90,50 L50,90 L10,50 Z" fill="#7c3aed" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="20" fill="#2563eb" opacity="0.4"/>
+                </svg>
+            </div>
+            
+            <div class="grid-pattern"></div>
+            <div class="glow-orb-1"></div>
+            <div class="glow-orb-2"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="icon-box">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h1>Logo Idea Generator</h1>
+                <p>Create stunning logo concepts powered by AI. Enter your brand details and let creativity flow.</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="glass-panel">
+                    <div class="form-group">
+                        <label class="form-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            Brand Name or Keywords
+                        </label>
+                        <input 
+                            type="text" 
+                            id="brandInput" 
+                            class="input-field" 
+                            placeholder="e.g., TechVision, Creative Studio, Modern App..."
+                        >
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                </svg>
+                                Logo Style
+                            </label>
+                            <select id="styleSelect" class="select-field">
+                                <option value="modern">Modern</option>
+                                <option value="retro">Retro</option>
+                                <option value="minimal">Minimal</option>
+                                <option value="playful">Playful</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                </svg>
+                                Number of Logos
+                            </label>
+                            <select id="countSelect" class="select-field">
+                                <option value="6">6 Logos</option>
+                                <option value="10">10 Logos</option>
+                                <option value="15">15 Logos</option>
+                                <option value="20">20 Logos</option>
+                                <option value="30">30 Logos</option>
+                                <option value="50">50 Logos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="generateBtn" class="generate-btn">
+                        <span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                            Generate Logo Ideas
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="hidden">
+                <div class="results-header">
+                    <div class="results-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                            <polyline points="17 6 23 6 23 12"/>
+                        </svg>
+                        <h2>Generated Logo Concepts</h2>
+                    </div>
+                    <div class="results-count" id="resultsCount">0 Logos</div>
+                </div>
+                <div id="resultsGrid" class="results-grid"></div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <p>Enter a brand name and style to generate logo concepts</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
